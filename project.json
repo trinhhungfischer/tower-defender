@@ -43,6 +43,7 @@
         "src/modules/gameplay/background/Background.js",
         "src/modules/gameplay/enemy/Enemy.js",
         "src/modules/gameplay/GameLayer.js",
+        "src/modules/gameplay/map/Map.js",
         "src/modules/mainmenu/ScreenMenu.js",
         "src/modules/mix/ScreenSetting.js"
     ]

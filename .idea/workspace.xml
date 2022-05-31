@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4d55f2b-12a8-484d-a811-f49e89a3e91c" name="Default" comment="'fix: Fix bird layer and game layer'">
-      <change afterPath="$PROJECT_DIR$/src/modules/config/BackgroundConfig.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/gameplay/enemy/Enemy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/gameplay/map/Map.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/Resource.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Resource.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/config/GameConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/config/GameConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/gameplay/Background.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/gameplay/background/Background.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/gameplay/Bird.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/gameplay/GameLayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/gameplay/GameLayer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/gameplay/Ground.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/gameplay/Label.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/gameplay/Pipe.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/mainmenu/ScreenMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/mainmenu/ScreenMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/gameplay/background/Background.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/gameplay/background/Background.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -550,17 +543,6 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" uri="http://localhost:63342/HelloJavascript/index.html">
       <RunnerSettings RunnerId="JavascriptDebugRunner" />
       <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
@@ -742,7 +724,7 @@
       <workItem from="1653965890488" duration="1105000" />
       <workItem from="1653968305968" duration="6000" />
       <workItem from="1653968366057" duration="326000" />
-      <workItem from="1653968715748" duration="2238000" />
+      <workItem from="1653968715748" duration="3950000" />
     </task>
     <task id="LOCAL-00001" summary="'feat: Start Project&#10;'">
       <created>1652848438089</created>
@@ -856,7 +838,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653969088704</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="'fix: Change directory'">
+      <created>1653971156062</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1653971156062</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">

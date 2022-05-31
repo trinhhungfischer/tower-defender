@@ -10,3 +10,9 @@ MW.GAME_STATE = {
     OVER:3,
     RETRY: 4
 };
+
+MW.ZORDER = {
+    BACKGROUND: -999,
+    MAP:0,
+
+}

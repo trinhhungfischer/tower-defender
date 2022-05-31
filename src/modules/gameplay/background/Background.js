@@ -15,11 +15,13 @@ var Background = cc.Sprite.extend({
         var winSize = cc.director.getWinSize();
 
         var background = cc.Sprite(res.imageBackgroundGame);
-        background.setPosition(winSize.width / 2, winSize.height/2);
+        background.setAnchorPoint(0, 0);
+        background.setPosition(0, 0);
         this.addChild(background, BG.ZODER.BACKGROUND);
 
         var background2 = cc.Sprite(res.imageBackgroundGame2);
-        background2.setPosition(winSize.width / 2, 0);
+        background2.setAnchorPoint(0, 0)
+        background2.setPosition(0, 0);
         this.addChild(background2, BG.ZODER.MAP_BACKGROUND);
 
     }
