@@ -9,12 +9,15 @@ var ScreenMenu = cc.Layer.extend({
 
     ctor:function() {
         this._super();
-        var size = cc.director.getVisibleSize();
 
+        fr.view(GameLayer).bind(this);
 
         return true;
     },
 
+    onEnter:function(){
+        this._super();
+    },
 });
 
 ScreenMenu.scene = function () {

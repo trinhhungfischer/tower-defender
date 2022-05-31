@@ -20,7 +20,11 @@ var res = {
     textureGame_png: "GameSprite.png",
 
     // image
-    imageBackgroundMain: "background-mainscreen.png",
+
+    // Background Game Layer
+    imageBackgroundGame: "map/map_background.png",
+    imageBackgroundGame2: "map/map_background_0000.png"
+
 
 
 };
