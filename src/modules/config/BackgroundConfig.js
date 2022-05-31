@@ -4,5 +4,6 @@ var BG = BG || {};
 
 BG.ZODER = {
     BACKGROUND : -999,
-    MAP_BACKGROUND: -900
+    MAP_BACKGROUND: -998,
+    BORDER_BACKGROUND: -997
 }

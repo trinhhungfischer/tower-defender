@@ -23,7 +23,8 @@ var res = {
 
     // Background Game Layer
     imageBackgroundGame: "map/map_background.png",
-    imageBackgroundGame2: "map/map_background_0000.png"
+    imageBackgroundGameBase: "map/map_background_0000.png",
+    imageBackgroundGameUpperBorder: "map/map_background_0003.png"
 
 
 

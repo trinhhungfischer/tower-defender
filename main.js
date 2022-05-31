@@ -2,7 +2,7 @@
 var gv = gv || {};
 
 var DESIGN_RESOLUTION_WIDTH = 720;
-var DESIGN_RESOLUTION_HEIGHT = 1048;
+var DESIGN_RESOLUTION_HEIGHT = 1280;
 cc.game.onStart = function () {
     if (!cc.sys.isNative && document.getElementById("cocosLoading")) //If referenced loading.js, please remove it
         document.body.removeChild(document.getElementById("cocosLoading"));
@@ -31,8 +31,6 @@ cc.game.onStart = function () {
         //socket
         gv.gameClient = new GameClient();
         gv.poolObjects = new PoolObject();
-        //modules
-        // testnetwork.connector = new testnetwork.Connector(gv.gameClient);
 
         fr.view(ScreenMenu);
     }, this);
