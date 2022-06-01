@@ -21,8 +21,8 @@ var GameLayer = cc.Layer.extend({
 
         var map = new Map();
         map.setPosition(winSize.width / 2 - map.cellWidth * Math.floor(MW.MAP_SIZE_WIDTH / 2),
-            winSize.height / 8);
-
+            winSize.height / 5);
+1
         this.addChild(map, MW.ZORDER.MAP);
 
         g_sharedGameLayer = this
