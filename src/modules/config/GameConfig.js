@@ -19,6 +19,8 @@ MW.ZORDER = {
 
 MW.CELL_TYPE = {
     GRASS: res.imageCellGrass,
+    NONE: null,
+
 }
 
 MW.MAP_SIZE_WIDTH = 7;

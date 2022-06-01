@@ -20,10 +20,10 @@ var Map = cc.Sprite.extend({
         for (var i = 0; i < MW.MAP_SIZE_WIDTH; i++) {
             for (var j = 0; j < MW.MAP_SIZE_HEIGHT; j++) {
                 if (this._checkCell[i + j * MW.MAP_SIZE_WIDTH]) {
-                    var cell = cc.Sprite(MW.CELL_TYPE.GRASS);
+                    var cell = new Cell(MW.CELL_TYPE.GRASS, i, j);
                     cell.setPosition(i * cell.width, j * cell.height);
                     this.addChild(cell, MW.ZORDER.MAP);
-                    MW.CONTAINER.MAP_CELL.append(cell);
+                    MW.CONTAINER.MAP_CELL.push(cell);
                 }
             }
         }

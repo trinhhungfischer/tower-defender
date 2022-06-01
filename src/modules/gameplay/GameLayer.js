@@ -16,12 +16,12 @@ var GameLayer = cc.Layer.extend({
         var winSize = cc.director.getWinSize();
 
         var background = new Background();
-        background.setScaleY(1.5);
+        background.setPositionY(winSize.height / 8);
         this.addChild(background, MW.ZORDER.BACKGROUND);
 
         var map = new Map();
         map.setPosition(winSize.width / 2 - map.cellWidth * Math.floor(MW.MAP_SIZE_WIDTH / 2),
-            winSize.height / 5);
+            winSize.height / 8);
 
         this.addChild(map, MW.ZORDER.MAP);
 

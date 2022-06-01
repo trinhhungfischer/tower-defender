@@ -21,12 +21,17 @@ var Background = cc.Sprite.extend({
         background.setPosition(0, 0);
         this.addChild(background, BG.ZODER.BACKGROUND);
 
+
         var background2 = cc.Sprite(res.imageBackgroundGameBase);
+
+        var yScaleRatio = background2.width / background2.height
         background2.setPosition(winSize.width / 2, winSize.height / 8 + background2.height / 2);
+        background2.setScaleY(yScaleRatio);
         this.addChild(background2, BG.ZODER.MAP_BACKGROUND);
 
         var border_background = cc.Sprite(res.imageBackgroundGameUpperBorder);
-        border_background.setAnchorPoint(0.5, 0.2);
+        border_background.setAnchorPoint(0.5, 0.2 * yScaleRatio);
+        border_background.setScaleY(yScaleRatio);
         border_background.setPosition(winSize.width / 2, winSize.height/8);
 
         this.addChild(border_background, BG.ZODER.BORDER_BACKGROUND);

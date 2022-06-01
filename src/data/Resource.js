@@ -27,7 +27,7 @@ var res = {
     imageBackgroundGameUpperBorder: "map/map_background_0003.png",
 
         // Game Layer
-    imageCellGrass: "map/map_cell_0000.png",
+    imageCellGrass: "map/map_cell_0002.png",
 
 
 };

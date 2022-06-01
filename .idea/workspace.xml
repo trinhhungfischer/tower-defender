@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4d55f2b-12a8-484d-a811-f49e89a3e91c" name="Default" comment="'fix: Fix bird layer and game layer'">
+    <list default="true" id="e4d55f2b-12a8-484d-a811-f49e89a3e91c" name="Default" comment="'feat: Complete Map Layer'">
+      <change afterPath="$PROJECT_DIR$/src/modules/config/CellConfig.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/config/BackgroundConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/config/BackgroundConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/Resource.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Resource.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/config/GameConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/config/GameConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/config/ObstacleType.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/config/ObstacleType.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/gameplay/GameLayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/gameplay/GameLayer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/gameplay/background/Background.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/gameplay/background/Background.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/gameplay/map/Cell.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/gameplay/map/Cell.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/gameplay/map/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/gameplay/map/Map.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -864,7 +865,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654048085394</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="'feat: Complete Map Layer'">
+      <created>1654051621134</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1654051621134</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -977,7 +985,8 @@
     <MESSAGE value="'fix: Fix bird layer and game layer'" />
     <MESSAGE value="'fix: Change directory'" />
     <MESSAGE value="'feat: Add new feature'" />
-    <option name="LAST_COMMIT_MESSAGE" value="'feat: Add new feature'" />
+    <MESSAGE value="'feat: Complete Map Layer'" />
+    <option name="LAST_COMMIT_MESSAGE" value="'feat: Complete Map Layer'" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
