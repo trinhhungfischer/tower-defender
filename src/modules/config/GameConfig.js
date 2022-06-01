@@ -14,5 +14,12 @@ MW.GAME_STATE = {
 MW.ZORDER = {
     BACKGROUND: -999,
     MAP:0,
-
+    OBJECT: 100,
 }
+
+MW.CELL_TYPE = {
+    GRASS: res.imageCellGrass,
+}
+
+MW.MAP_SIZE_WIDTH = 7;
+MW.MAP_SIZE_HEIGHT = 7;

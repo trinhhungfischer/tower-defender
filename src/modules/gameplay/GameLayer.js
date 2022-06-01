@@ -13,11 +13,13 @@ var GameLayer = cc.Layer.extend({
     },
 
     init:function() {
-        var winSize = cc.director.getWinSize();
-        // Schedule
-
         var background = new Background();
         this.addChild(background);
+
+        var map = new Map();
+        map.setPosition(60, 60);
+        map.scale = 1.1;
+        this.addChild(map);
 
         g_sharedGameLayer = this
         // preset

@@ -21,21 +21,17 @@ var res = {
 
     // image
 
-    // Background Game Layer
+        // Background Game Layer
     imageBackgroundGame: "map/map_background.png",
     imageBackgroundGameBase: "map/map_background_0000.png",
-    imageBackgroundGameUpperBorder: "map/map_background_0003.png"
+    imageBackgroundGameUpperBorder: "map/map_background_0003.png",
 
+        // Game Layer
+    imageCellGrass: "map/map_cell_0000.png",
 
 
 };
 
 var g_resources = [
-    "CloseNormal.png",
-    "CloseSelected.png",
     "config.json",
-    "Default/Button_Disable.png",
-    "Default/Button_Normal.png",
-    "Default/Button_Press.png",
-
 ];
