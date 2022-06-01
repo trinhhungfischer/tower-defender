@@ -23,3 +23,8 @@ MW.CELL_TYPE = {
 
 MW.MAP_SIZE_WIDTH = 7;
 MW.MAP_SIZE_HEIGHT = 7;
+
+MW.CONTAINER = {
+    MAP_CELL: [],
+
+}
