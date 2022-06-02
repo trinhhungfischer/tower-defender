@@ -10,6 +10,7 @@ var Map = cc.Sprite.extend({
     _isVisitedCell: [],
     _path: [],
     _listPath:[],
+    _cellQueue:[],
 
 
     ctor:function() {
@@ -46,7 +47,7 @@ var Map = cc.Sprite.extend({
         this.cellHeight = cell.height;
 
         this._path.push(this.startPoint);
-
+        this._cellQueue.push(this.startPoint);
 
     },
 
@@ -62,7 +63,32 @@ var Map = cc.Sprite.extend({
         Hàm sẽ di chuyển từ vị trí góc trên bên trái tới góc dưới bên phải màn hình
         hay nghĩa là đi từ vị trí (0, 6) tới vị trí (6, 0)
      */
+
+    isOk: false,
+
     _pathFinder: function (startCellId, targetCellId){
+
+        if (startCellId == targetCellId)
+            return this._path;
+
+        while (!this.isOk) {
+            var nextCellIdList = this._getNextCell(startCellId);
+            var nextCellId = nextCellIdList[randomId];
+
+            var randomId = Math.floor(Math.random() * nextCellIdList.length);
+
+
+            this._isVisitedCell[nextCellId] = true;
+
+            for (var i = 0; i < this._path; i++) {
+                if (this._isMaxThreeCell(this._path[i])) {
+                    this.isOk = true;
+                    break;
+                }
+            }
+
+
+        }
 
     },
 
@@ -75,12 +101,25 @@ var Map = cc.Sprite.extend({
 
         for (var i = 0; i < listCell.length; i ++) {
             var [__nextCellXPos, __nextCellYPos] = listCell[i];
+            var cellId = this._getCellIdFromPos(__nextCellXPos, __nextCellYPos);
 
-            if (this._isLegalCell(__nextCellXPos, __nextCellYPos))
+            if (this._isLegalCell(__nextCellXPos, __nextCellYPos) &&  !this._isVisitedCell[cellId])
                 __nextCell.push(this._getCellIdFromPos(__nextCellXPos, __nextCellYPos));
         };
 
         return __nextCell;
+    },
+
+    _isMaxThreeCell:function (cellId) {
+        [xPos, yPos] = this._getPosFromCellId(cellId);
+
+        if ((xPos > 0) && (xPos < MW.MAP_SIZE_WIDTH - 1) && (yPos > 0) && (yPos < MW.MAP_SIZE_WIDTH - 1)) {
+            return (this._getNextCell(cellId).length >= 2);
+        }
+        else {
+            return (this._getNextCell(cellId).length >= 1);
+        }
+
     },
 
     _isLegalCell: function (xPos, yPos) {
