@@ -5,12 +5,11 @@ var Map = cc.Sprite.extend({
     cellHeight: null,
     startPoint: null,
     endPoint: null,
+    numOfObstacle: 5,
 
-    _checkCell: [],
-    _isVisitedCell: [],
-    _path: [],
-    _listPath:[],
-    _cellQueue:[],
+    obstacleCellId:[],
+    cellObjectId:[],
+
 
 
     ctor:function() {
@@ -21,42 +20,64 @@ var Map = cc.Sprite.extend({
     },
 
     _init:function () {
-        this._randomMapCell();
+
+        this.cellObjectId = new Array(MW.MAP_SIZE_HEIGHT * MW.MAP_SIZE_WIDTH).fill(MW.MAP_CELL_TYPE.PATH);
+
         this.startPoint = this._getCellIdFromPos(0, MW.MAP_SIZE_HEIGHT - 1);
         this.endPoint = this._getCellIdFromPos(MW.MAP_SIZE_WIDTH - 1, 0);
 
 
-        for (var i = 0; i < MW.MAP_SIZE_WIDTH; i++) {
-            for (var j = 0; j < MW.MAP_SIZE_HEIGHT; j++) {
-                this._isVisitedCell[i + j * MW.MAP_SIZE_WIDTH] = false;
-            }
+        for (var j = 2; j <= 44; j += 7) {
+            this.cellObjectId[j] = MW.MAP_CELL_TYPE.OBSTACLE;
         }
+        this.cellObjectId[16] = MW.MAP_CELL_TYPE.PATH;
 
-        for (var i = 0; i < MW.MAP_SIZE_WIDTH; i++) {
-            for (var j = 0; j < MW.MAP_SIZE_HEIGHT; j++) {
-                if (this._checkCell[i + j * MW.MAP_SIZE_WIDTH]) {
-                    var cell = new Cell(MW.CELL_TYPE.GRASS, i, j);
+        cc.log("Hello" + this._pathFinder(this.startPoint, this.endPoint));
 
-                    cell.setPosition(i * cell.width, j * cell.height);
-                    this.addChild(cell, MW.ZORDER.MAP);
-                    MW.CONTAINER.MAP_CELL.push(cell);
-                }
-            }
-        }
-        this.cellWidth = cell.width;
-        this.cellHeight = cell.height;
-
-        this._path.push(this.startPoint);
-        this._cellQueue.push(this.startPoint);
-
+        // this._randomAllObstacles();
     },
 
-    _randomMapCell: function () {
-        for (var i = 0; i < MW.MAP_SIZE_WIDTH; i++) {
-            for (var j = 0; j < MW.MAP_SIZE_HEIGHT; j++) {
-                this._checkCell[i + j * MW.MAP_SIZE_WIDTH] = Math.random() < 0.5;
+    _randomOneObstacle: function () {
+        var xPos, yPos = null;
+        while (true) {
+            xPos = Math.floor(Math.random() * MW.MAP_SIZE_WIDTH);
+            yPos = Math.floor(Math.random() * MW.MAP_SIZE_HEIGHT);
+
+            let curCellId = this._getCellIdFromPos(xPos, yPos);
+
+            let nexCellId = this._getNextCell(curCellId);
+
+            let isLegalRandomCell = true;
+
+            for (var i = 0; i < nexCellId.length; i ++ ) {
+                if (this.cellObjectId[nexCellId[i]] == MW.MAP_CELL_TYPE.OBSTACLE) {
+                    isLegalRandomCell = false;
+                    break;
+                }
+            }
+
+            if (isLegalRandomCell) {
+                this.cellObjectId[curCellId] = MW.MAP_CELL_TYPE.OBSTACLE;
+                break;
             }
         }
+    },
+
+    _randomAllObstacles: function (){
+        var isLegalMap = false;
+        var countOfObstacle = 0;
+
+        while (!isLegalMap && countOfObstacle < this.numOfObstacle) {
+            var pastCellMapId = this.cellObjectId;
+
+            this._randomOneObstacle();
+            if (this._pathFinder(this.startPoint, this.endPoint) == null) {
+                this.cellObjectId = pastCellMapId;
+                continue;
+            }
+            else countOfObstacle ++;
+        }
+
     },
 
     /*
@@ -64,31 +85,53 @@ var Map = cc.Sprite.extend({
         hay nghĩa là đi từ vị trí (0, 6) tới vị trí (6, 0)
      */
 
-    isOk: false,
 
     _pathFinder: function (startCellId, targetCellId){
+        var queue = [];
 
-        if (startCellId == targetCellId)
-            return this._path;
+        var prev = new Array(MW.MAP_SIZE_WIDTH * MW.MAP_SIZE_HEIGHT);
 
-        while (!this.isOk) {
-            var nextCellIdList = this._getNextCell(startCellId);
-            var nextCellId = nextCellIdList[randomId];
+        prev[startCellId] = null;
 
-            var randomId = Math.floor(Math.random() * nextCellIdList.length);
+        queue.push({cellId : startCellId});
 
+        var _isVisitedCell = new Array(MW.MAP_SIZE_WIDTH * MW.MAP_SIZE_HEIGHT).fill(false);
 
-            this._isVisitedCell[nextCellId] = true;
+        _isVisitedCell[startCellId] = true;
 
-            for (var i = 0; i < this._path; i++) {
-                if (this._isMaxThreeCell(this._path[i])) {
-                    this.isOk = true;
-                    break;
+        while (queue) {
+            var curObject = queue.shift();
+
+            var curCellId = curObject["cellId"];
+
+            if (curCellId == targetCellId)
+            {
+                var shortestPath = []
+                while (true) {
+                    shortestPath.push(curCellId);
+                    curCellId = prev[curCellId];
+                    if (curCellId == startCellId) break;
                 }
+                shortestPath.push(startCellId);
+                return shortestPath.reverse();
             }
 
+            var nextCellId = this._getNextCell(curCellId);
 
+            for (var j = 0; j < nextCellId.length; j ++) {
+                var curNextCellId = nextCellId[j];
+
+                if ((this.cellObjectId[curNextCellId] == MW.MAP_CELL_TYPE.PATH) && (!_isVisitedCell[curNextCellId])) {
+                    queue.push({cellId: curNextCellId});
+                    prev[curNextCellId] = curCellId;
+
+                    _isVisitedCell[curNextCellId] = true;
+                }
+            }
         }
+
+        return null;
+
 
     },
 
@@ -101,9 +144,8 @@ var Map = cc.Sprite.extend({
 
         for (var i = 0; i < listCell.length; i ++) {
             var [__nextCellXPos, __nextCellYPos] = listCell[i];
-            var cellId = this._getCellIdFromPos(__nextCellXPos, __nextCellYPos);
 
-            if (this._isLegalCell(__nextCellXPos, __nextCellYPos) &&  !this._isVisitedCell[cellId])
+            if (this._isLegalCell(__nextCellXPos, __nextCellYPos))
                 __nextCell.push(this._getCellIdFromPos(__nextCellXPos, __nextCellYPos));
         };
 

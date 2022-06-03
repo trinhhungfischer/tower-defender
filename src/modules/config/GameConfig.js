@@ -30,3 +30,9 @@ MW.CONTAINER = {
     MAP_CELL: [],
 
 }
+
+MW.MAP_CELL_TYPE = {
+    PATH: 0,
+    OBSTACLE: 1,
+
+}

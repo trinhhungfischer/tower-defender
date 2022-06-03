@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4d55f2b-12a8-484d-a811-f49e89a3e91c" name="Default" comment="'feat: Complete Background layer'">
+    <list default="true" id="e4d55f2b-12a8-484d-a811-f49e89a3e91c" name="Default" comment="'feat: Find path'">
+      <change afterPath="$PROJECT_DIR$/src/modules/gameplay/map/Obstacle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/config/GameConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/config/GameConfig.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/gameplay/GameLayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/gameplay/GameLayer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/gameplay/map/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/gameplay/map/Map.js" afterDir="false" />
     </list>
@@ -19,6 +21,12 @@
     <option name="GROUP_BY_TYPE" value="true" />
     <option name="SORT_CHILDREN" value="false" />
     <option name="SHOW_TABLE_CONSTRAINTS" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="HelloJavascript">
+      <favorite_root url="file://$PROJECT_DIR$/frameworks/runtime-src_/proj.android/assets/src/gui/screen/MainBoard.js" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      <favorite_root url="file://$PROJECT_DIR$/res/ipConfig.json" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+    </favorites_list>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -112,9 +120,6 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
@@ -139,7 +144,6 @@
     </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectReloadState">
@@ -304,12 +308,25 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="FullScreen" value="false" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Project/lgrc_project/client/HelloJavascript/src/framework/Framework.js" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../flappy_bird" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="options.lastSelected" value="web-ide.project.structure" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="recentsLimit" value="5" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -541,7 +558,7 @@
       <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
       <method v="2" />
     </configuration>
-    <configuration name="InPacketGenerate.js" type="NodeJSConfigurationType" temporary="true" path-to-node="$PROJECT_DIR$/../../../../Program Files/nodejs/node" path-to-js-file="InPacketFactory.js" working-dir="$PROJECT_DIR$/src/network">
+    <configuration name="InPacketGenerate.js" type="NodeJSConfigurationType" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="InPacketFactory.js" working-dir="$PROJECT_DIR$/src/network">
       <RunnerSettings RunnerId="NodeJS.debug" />
       <RunnerSettings RunnerId="NodeJS.run" />
       <ConfigurationWrapper RunnerId="NodeJS.debug" />
@@ -718,10 +735,11 @@
       <workItem from="1653968305968" duration="6000" />
       <workItem from="1653968366057" duration="326000" />
       <workItem from="1653968715748" duration="3950000" />
-      <workItem from="1653983922289" duration="269000" />
-      <workItem from="1653984212043" duration="525000" />
-      <workItem from="1653984774548" duration="2917000" />
-      <workItem from="1654099283441" duration="3844000" />
+      <workItem from="1654216288496" duration="7148000" />
+      <workItem from="1654223810265" duration="201000" />
+      <workItem from="1654224065617" duration="1159000" />
+      <workItem from="1654225384569" duration="125000" />
+      <workItem from="1654225603845" duration="5342000" />
     </task>
     <task id="LOCAL-00001" summary="'feat: Start Project&#10;'">
       <created>1652848438089</created>
@@ -842,7 +860,35 @@
       <option name="project" value="LOCAL" />
       <updated>1653971156062</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="'feat: Add new feature'">
+      <created>1654048085394</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1654048085394</updated>
+    </task>
+    <task id="LOCAL-00019" summary="'feat: Complete Map Layer'">
+      <created>1654051621134</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1654051621134</updated>
+    </task>
+    <task id="LOCAL-00020" summary="'feat: Add cell id'">
+      <created>1654135572863</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1654135572863</updated>
+    </task>
+    <task id="LOCAL-00021" summary="'feat: Find path'">
+      <created>1654145107364</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1654145107364</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -954,10 +1000,26 @@
     <MESSAGE value="'fix: Fix background mainscreen'" />
     <MESSAGE value="'fix: Fix bird layer and game layer'" />
     <MESSAGE value="'fix: Change directory'" />
-    <option name="LAST_COMMIT_MESSAGE" value="'fix: Change directory'" />
+    <MESSAGE value="'feat: Add new feature'" />
+    <MESSAGE value="'feat: Complete Map Layer'" />
+    <MESSAGE value="'feat: Add cell id'" />
+    <MESSAGE value="'feat: Find path'" />
+    <option name="LAST_COMMIT_MESSAGE" value="'feat: Find path'" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="cocos javascript">
+          <url>file://$PROJECT_DIR$/simulator/win32/script/jsb_boot.js</url>
+          <line>449</line>
+          <option name="timeStamp" value="159" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="cocos javascript">
+          <url>file://$PROJECT_DIR$/frameworks/js-bindings/api/jsb_cocos2dx_auto_api.js</url>
+          <line>20903</line>
+          <option name="timeStamp" value="162" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint enabled="true" suspend="THREAD" type="java-exception" />
         <breakpoint enabled="true" log-message="true" type="javascript-exception" />
