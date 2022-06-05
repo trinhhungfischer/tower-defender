@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4d55f2b-12a8-484d-a811-f49e89a3e91c" name="Default" comment="'feat: Find path'">
-      <change afterPath="$PROJECT_DIR$/src/modules/gameplay/map/Obstacle.js" afterDir="false" />
+    <list default="true" id="e4d55f2b-12a8-484d-a811-f49e89a3e91c" name="Default" comment="'feat: Add find path'">
+      <change afterPath="$PROJECT_DIR$/src/data/ResourceMap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/gameplay/helper/PathFinder.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/config/GameConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/config/GameConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/config/TownerType.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/config/TowerType.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/gameplay/GameLayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/gameplay/GameLayer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/gameplay/map/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/gameplay/map/Map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/gameplay/map/Obstacle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/gameplay/map/Obstacle.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,6 +148,7 @@
     </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectReloadState">
@@ -558,7 +563,7 @@
       <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
       <method v="2" />
     </configuration>
-    <configuration name="InPacketGenerate.js" type="NodeJSConfigurationType" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="InPacketFactory.js" working-dir="$PROJECT_DIR$/src/network">
+    <configuration name="InPacketGenerate.js" type="NodeJSConfigurationType" temporary="true" path-to-node="$PROJECT_DIR$/../../../../Program Files/nodejs/node" path-to-js-file="InPacketFactory.js" working-dir="$PROJECT_DIR$/src/network">
       <RunnerSettings RunnerId="NodeJS.debug" />
       <RunnerSettings RunnerId="NodeJS.run" />
       <ConfigurationWrapper RunnerId="NodeJS.debug" />
@@ -740,6 +745,10 @@
       <workItem from="1654224065617" duration="1159000" />
       <workItem from="1654225384569" duration="125000" />
       <workItem from="1654225603845" duration="5342000" />
+      <workItem from="1654336835075" duration="6141000" />
+      <workItem from="1654387420542" duration="2971000" />
+      <workItem from="1654402089363" duration="335000" />
+      <workItem from="1654402444517" duration="503000" />
     </task>
     <task id="LOCAL-00001" summary="'feat: Start Project&#10;'">
       <created>1652848438089</created>

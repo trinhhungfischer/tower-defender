@@ -23,7 +23,7 @@ var GameLayer = cc.Layer.extend({
         // map.setPosition(winSize.width / 2 - map.cellWidth * Math.floor(MW.MAP_SIZE_WIDTH / 2),
         //     winSize.height / 5);
 1
-        this.addChild(map, MW.ZORDER.MAP);
+        this.addChild(map, MW.ZORDER.INGAME_MAP);
 
         g_sharedGameLayer = this
         // preset

@@ -20,6 +20,7 @@
     "jsList": [
         "src/data/Resource.js",
         "src/data/ResourceAnimation.js",
+        "src/data/ResourceMap.js",
         "src/framework/AnimationMgr.js",
         "src/framework/Framework.js",
         "src/framework/GUI.js",
@@ -39,15 +40,18 @@
         "src/base/Resource.js",
         "src/base/UIFactory.js",
         "src/modules/config/BackgroundConfig.js",
+        "src/modules/config/CellConfig.js",
         "src/modules/config/EnemyType.js",
         "src/modules/config/GameConfig.js",
         "src/modules/config/ObstacleType.js",
-        "src/modules/config/TownerType.js",
+        "src/modules/config/TowerType.js",
         "src/modules/gameplay/background/Background.js",
         "src/modules/gameplay/enemy/Enemy.js",
         "src/modules/gameplay/GameLayer.js",
+        "src/modules/gameplay/helper/PathFinder.js",
         "src/modules/gameplay/map/Cell.js",
         "src/modules/gameplay/map/Map.js",
+        "src/modules/gameplay/map/Obstacle.js",
         "src/modules/mainmenu/ScreenMenu.js",
         "src/modules/mix/ScreenSetting.js"
     ]

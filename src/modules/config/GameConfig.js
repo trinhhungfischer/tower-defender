@@ -13,26 +13,21 @@ MW.GAME_STATE = {
 
 MW.ZORDER = {
     BACKGROUND: -999,
-    MAP:0,
-    OBJECT: 100,
+    INGAME_MAP:0,
+    INGAME_OBJECT: 100,
 }
 
-MW.CELL_TYPE = {
-    GRASS: res.imageCellGrass,
-    NONE: null,
-
-}
-
+// Map config
 MW.MAP_SIZE_WIDTH = 7;
 MW.MAP_SIZE_HEIGHT = 7;
+MW.MAP_OBSTACLE = 10;
+MW.MAP_CELL_TYPE = {
+    PATH: 0,
+    OBSTACLE: 1,
+}
 
 MW.CONTAINER = {
     MAP_CELL: [],
 
 }
 
-MW.MAP_CELL_TYPE = {
-    PATH: 0,
-    OBSTACLE: 1,
-
-}

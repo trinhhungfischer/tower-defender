@@ -5,12 +5,10 @@ var Map = cc.Sprite.extend({
     cellHeight: null,
     startPoint: null,
     endPoint: null,
-    numOfObstacle: 5,
+    numOfObstacle: MW.MAP_OBSTACLE,
 
     obstacleCellId:[],
     cellObjectId:[],
-
-
 
     ctor:function() {
         this._super();
@@ -26,16 +24,8 @@ var Map = cc.Sprite.extend({
         this.startPoint = this._getCellIdFromPos(0, MW.MAP_SIZE_HEIGHT - 1);
         this.endPoint = this._getCellIdFromPos(MW.MAP_SIZE_WIDTH - 1, 0);
 
-
-        for (var j = 2; j <= 44; j += 7) {
-            this.cellObjectId[j] = MW.MAP_CELL_TYPE.OBSTACLE;
-        }
-        this.cellObjectId[16] = MW.MAP_CELL_TYPE.PATH;
-
-        cc.log("Hello" + this._pathFinder(this.startPoint, this.endPoint));
-
-        // this._randomAllObstacles();
-    },
+        this._randomAllObstacles();
+        },
 
     _randomOneObstacle: function () {
         var xPos, yPos = null;
@@ -50,7 +40,7 @@ var Map = cc.Sprite.extend({
             let isLegalRandomCell = true;
 
             for (var i = 0; i < nexCellId.length; i ++ ) {
-                if (this.cellObjectId[nexCellId[i]] == MW.MAP_CELL_TYPE.OBSTACLE) {
+                if (this.cellObjectId[nexCellId[i]] === MW.MAP_CELL_TYPE.OBSTACLE) {
                     isLegalRandomCell = false;
                     break;
                 }
@@ -64,19 +54,19 @@ var Map = cc.Sprite.extend({
     },
 
     _randomAllObstacles: function (){
-        var isLegalMap = false;
         var countOfObstacle = 0;
 
-        while (!isLegalMap && countOfObstacle < this.numOfObstacle) {
+        while (countOfObstacle < this.numOfObstacle) {
             var pastCellMapId = this.cellObjectId;
 
             this._randomOneObstacle();
             if (this._pathFinder(this.startPoint, this.endPoint) == null) {
                 this.cellObjectId = pastCellMapId;
-                continue;
             }
             else countOfObstacle ++;
         }
+
+        return countOfObstacle;
 
     },
 
@@ -93,24 +83,24 @@ var Map = cc.Sprite.extend({
 
         prev[startCellId] = null;
 
-        queue.push({cellId : startCellId});
+        queue.push(startCellId);
 
         var _isVisitedCell = new Array(MW.MAP_SIZE_WIDTH * MW.MAP_SIZE_HEIGHT).fill(false);
 
         _isVisitedCell[startCellId] = true;
 
         while (queue) {
-            var curObject = queue.shift();
+            var curCellId = queue.shift();
 
-            var curCellId = curObject["cellId"];
+            if (curCellId == null) break;
 
-            if (curCellId == targetCellId)
+            if (curCellId === targetCellId)
             {
                 var shortestPath = []
                 while (true) {
                     shortestPath.push(curCellId);
                     curCellId = prev[curCellId];
-                    if (curCellId == startCellId) break;
+                    if (curCellId === startCellId) break;
                 }
                 shortestPath.push(startCellId);
                 return shortestPath.reverse();
@@ -121,13 +111,13 @@ var Map = cc.Sprite.extend({
             for (var j = 0; j < nextCellId.length; j ++) {
                 var curNextCellId = nextCellId[j];
 
-                if ((this.cellObjectId[curNextCellId] == MW.MAP_CELL_TYPE.PATH) && (!_isVisitedCell[curNextCellId])) {
-                    queue.push({cellId: curNextCellId});
+                if ((this.cellObjectId[curNextCellId] === MW.MAP_CELL_TYPE.PATH) && (!_isVisitedCell[curNextCellId])) {
+                    queue.push(curNextCellId);
                     prev[curNextCellId] = curCellId;
-
                     _isVisitedCell[curNextCellId] = true;
                 }
             }
+
         }
 
         return null;
@@ -147,7 +137,7 @@ var Map = cc.Sprite.extend({
 
             if (this._isLegalCell(__nextCellXPos, __nextCellYPos))
                 __nextCell.push(this._getCellIdFromPos(__nextCellXPos, __nextCellYPos));
-        };
+        }
 
         return __nextCell;
     },
@@ -176,6 +166,4 @@ var Map = cc.Sprite.extend({
     _getCellIdFromPos:function (xPos, yPos) {
         return xPos + yPos * MW.MAP_SIZE_WIDTH;
     }
-
-
 });
