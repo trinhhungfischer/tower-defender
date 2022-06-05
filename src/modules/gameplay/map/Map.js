@@ -21,11 +21,13 @@ var Map = cc.Sprite.extend({
 
         this.cellObjectId = new Array(MW.MAP_SIZE_HEIGHT * MW.MAP_SIZE_WIDTH).fill(MW.MAP_CELL_TYPE.PATH);
 
-        this.startPoint = this._getCellIdFromPos(0, MW.MAP_SIZE_HEIGHT - 1);
-        this.endPoint = this._getCellIdFromPos(MW.MAP_SIZE_WIDTH - 1, 0);
+        this.startPoint = this.getCellIdFromPos(0, MW.MAP_SIZE_HEIGHT - 1);
+        this.endPoint = this.getCellIdFromPos(MW.MAP_SIZE_WIDTH - 1, 0);
 
         this._randomAllObstacles();
 
+        this._initCell();
+    
 
 
     },
@@ -34,25 +36,24 @@ var Map = cc.Sprite.extend({
         for (let i = 0; i < MW.MAP_SIZE_WIDTH; i++) {
             for (let j = 0; j < MW.MAP_SIZE_HEIGHT; j ++) {
 
-                var cell = new Cell();
+                var cellId = this.getCellIdFromPos(i, j);
 
-                MW.CONTAINER.MAP_CELL.push()
-            }
-        }
-    },
+                var cell = new Cell(CELL.TYPE.GRASS, i, j);
 
-    _initObstacle: function () {
-        for (let i = 0; i < MW.MAP_SIZE_WIDTH; i++) {
-            for (let j = 0; j < MW.MAP_SIZE_HEIGHT; j ++) {
-                var cellId = this._getCellIdFromPos(i, j);
-
-                if (this.cellObjectId[cellId] === MW.MAP_CELL_TYPE.OBSTACLE) {
-
-
-                    MW.CONTAINER.MAP_OBSTACLE.push()
+                cell.setPosition(i * cell.width, j * cell.height);
+                this.addChild(cell, MW.ZORDER.INGAME_CELL);
+                if (this.cellObjectId[cellId] === MW.MAP_CELL_TYPE.OBSTACLE)
+                {
+                    var obstacle = new Cell(CELL.TYPE.ROCK_OBSTACLE, i, j);
+                    cell.addChild(obstacle, MW.ZORDER.INGAME_CELL);
+                    MW.CONTAINER.MAP_OBSTACLE.push(cell);
                 }
+                else MW.CONTAINER.MAP_CELL.push(cell);
             }
         }
+
+        this.cellWidth = cell.width;
+        this.cellHeight = cell.height;
     },
 
     _randomOneObstacle: function () {
@@ -61,9 +62,12 @@ var Map = cc.Sprite.extend({
             xPos = Math.floor(Math.random() * MW.MAP_SIZE_WIDTH);
             yPos = Math.floor(Math.random() * MW.MAP_SIZE_HEIGHT);
 
-            let curCellId = this._getCellIdFromPos(xPos, yPos);
+            let curCellId = this.getCellIdFromPos(xPos, yPos);
 
-            let nexCellId = this._getNextCell(curCellId);
+            if (curCellId === this.startPoint && curCellId === this.endPoint)
+                continue;
+
+            let nexCellId = this.getNextCell(curCellId);
 
             let isLegalRandomCell = true;
 
@@ -134,7 +138,7 @@ var Map = cc.Sprite.extend({
                 return shortestPath.reverse();
             }
 
-            var nextCellId = this._getNextCell(curCellId);
+            var nextCellId = this.getNextCell(curCellId);
 
             for (var j = 0; j < nextCellId.length; j ++) {
                 var curNextCellId = nextCellId[j];
@@ -149,14 +153,12 @@ var Map = cc.Sprite.extend({
         }
 
         return null;
-
-
     },
 
-    _getNextCell: function (cellId) {
+    getNextCell: function (cellId) {
         var __nextCell = [];
 
-        var [__xPos, __yPos] = this._getPosFromCellId(cellId);
+        var [__xPos, __yPos] = this.getPosFromCellId(cellId);
 
         var listCell = [[__xPos + 1, __yPos], [__xPos - 1, __yPos], [__xPos, __yPos + 1], [__xPos, __yPos - 1]];
 
@@ -164,20 +166,20 @@ var Map = cc.Sprite.extend({
             var [__nextCellXPos, __nextCellYPos] = listCell[i];
 
             if (this._isLegalCell(__nextCellXPos, __nextCellYPos))
-                __nextCell.push(this._getCellIdFromPos(__nextCellXPos, __nextCellYPos));
+                __nextCell.push(this.getCellIdFromPos(__nextCellXPos, __nextCellYPos));
         }
 
         return __nextCell;
     },
 
     _isMaxThreeCell:function (cellId) {
-        [xPos, yPos] = this._getPosFromCellId(cellId);
+        [xPos, yPos] = this.getPosFromCellId(cellId);
 
         if ((xPos > 0) && (xPos < MW.MAP_SIZE_WIDTH - 1) && (yPos > 0) && (yPos < MW.MAP_SIZE_WIDTH - 1)) {
-            return (this._getNextCell(cellId).length >= 2);
+            return (this.getNextCell(cellId).length >= 2);
         }
         else {
-            return (this._getNextCell(cellId).length >= 1);
+            return (this.getNextCell(cellId).length >= 1);
         }
 
     },
@@ -187,11 +189,11 @@ var Map = cc.Sprite.extend({
             (yPos >= 0) && (yPos < MW.MAP_SIZE_WIDTH))
     },
 
-    _getPosFromCellId: function (cellId) {
+    getPosFromCellId: function (cellId) {
         return [cellId % MW.MAP_SIZE_WIDTH, Math.floor(cellId / MW.MAP_SIZE_WIDTH)];
     },
 
-    _getCellIdFromPos:function (xPos, yPos) {
+    getCellIdFromPos:function (xPos, yPos) {
         return xPos + yPos * MW.MAP_SIZE_WIDTH;
     }
 });

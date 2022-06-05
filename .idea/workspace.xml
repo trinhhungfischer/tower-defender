@@ -3,8 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="e4d55f2b-12a8-484d-a811-f49e89a3e91c" name="Default" comment="'feat: Add find path'">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/Resource.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Resource.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/ResourceMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/ResourceMap.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/config/CellConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/config/CellConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/config/GameConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/config/GameConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/gameplay/GameLayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/gameplay/GameLayer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/gameplay/enemy/Enemy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/gameplay/enemy/Enemy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/gameplay/helper/PathFinder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/gameplay/map/Cell.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/gameplay/map/Cell.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/gameplay/map/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/gameplay/map/Map.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -313,7 +321,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Project/lgrc_project/client/HelloJavascript/src/framework/Framework.js" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../flappy_bird" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../workshop/GameDemo" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="options.lastSelected" value="web-ide.project.structure" />
     <property name="options.searchVisible" value="true" />
@@ -732,7 +740,9 @@
       <workItem from="1654387420542" duration="2971000" />
       <workItem from="1654402089363" duration="335000" />
       <workItem from="1654402444517" duration="4562000" />
-      <workItem from="1654437131509" duration="854000" />
+      <workItem from="1654437131509" duration="999000" />
+      <workItem from="1654433591646" duration="3144000" />
+      <workItem from="1654446332333" duration="1175000" />
     </task>
     <task id="LOCAL-00001" summary="'feat: Start Project&#10;'">
       <created>1652848438089</created>
@@ -895,7 +905,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654437299363</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="'fix: Fix map res'">
+      <created>1654438131446</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1654438131446</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1013,7 +1030,8 @@
     <MESSAGE value="'feat: Find path'" />
     <MESSAGE value="'Complete random obstacle and map'" />
     <MESSAGE value="'feat: Add res map'" />
-    <option name="LAST_COMMIT_MESSAGE" value="'feat: Add res map'" />
+    <MESSAGE value="'fix: Fix map res'" />
+    <option name="LAST_COMMIT_MESSAGE" value="'fix: Fix map res'" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

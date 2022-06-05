@@ -14,7 +14,9 @@ MW.GAME_STATE = {
 MW.ZORDER = {
     BACKGROUND: -999,
     INGAME_MAP:0,
-    INGAME_OBJECT: 100,
+    INGAME_CELL: 100,
+    INGAME_TOWER: 150,
+    INGAME_MONSTER: 200,
 }
 
 // Map config
@@ -29,7 +31,6 @@ MW.MAP_CELL_TYPE = {
 MW.CONTAINER = {
     MAP_CELL: [],
     MAP_OBSTACLE: [],
-
 
 }
 

@@ -6,4 +6,9 @@ var Enemy = cc.Sprite.extend({
         return true;
     },
 
+    update:function () {
+
+    }
+
+
 });

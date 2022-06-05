@@ -48,7 +48,6 @@
         "src/modules/gameplay/background/Background.js",
         "src/modules/gameplay/enemy/Enemy.js",
         "src/modules/gameplay/GameLayer.js",
-        "src/modules/gameplay/helper/PathFinder.js",
         "src/modules/gameplay/map/Cell.js",
         "src/modules/gameplay/map/Map.js",
         "src/modules/gameplay/map/Obstacle.js",
