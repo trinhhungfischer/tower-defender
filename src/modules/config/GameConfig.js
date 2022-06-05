@@ -28,6 +28,8 @@ MW.MAP_CELL_TYPE = {
 
 MW.CONTAINER = {
     MAP_CELL: [],
+    MAP_OBSTACLE: [],
+
 
 }
 

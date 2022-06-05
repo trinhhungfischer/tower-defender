@@ -25,7 +25,35 @@ var Map = cc.Sprite.extend({
         this.endPoint = this._getCellIdFromPos(MW.MAP_SIZE_WIDTH - 1, 0);
 
         this._randomAllObstacles();
-        },
+
+
+
+    },
+
+    _initCell: function () {
+        for (let i = 0; i < MW.MAP_SIZE_WIDTH; i++) {
+            for (let j = 0; j < MW.MAP_SIZE_HEIGHT; j ++) {
+
+                var cell = new Cell();
+
+                MW.CONTAINER.MAP_CELL.push()
+            }
+        }
+    },
+
+    _initObstacle: function () {
+        for (let i = 0; i < MW.MAP_SIZE_WIDTH; i++) {
+            for (let j = 0; j < MW.MAP_SIZE_HEIGHT; j ++) {
+                var cellId = this._getCellIdFromPos(i, j);
+
+                if (this.cellObjectId[cellId] === MW.MAP_CELL_TYPE.OBSTACLE) {
+
+
+                    MW.CONTAINER.MAP_OBSTACLE.push()
+                }
+            }
+        }
+    },
 
     _randomOneObstacle: function () {
         var xPos, yPos = null;

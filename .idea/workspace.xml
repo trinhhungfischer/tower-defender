@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4d55f2b-12a8-484d-a811-f49e89a3e91c" name="Default" comment="'feat: Add find path'">
-      <change afterPath="$PROJECT_DIR$/src/data/ResourceMap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/gameplay/helper/PathFinder.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/Resource.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Resource.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/ResourceMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/ResourceMap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/config/CellConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/config/CellConfig.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/config/GameConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/config/GameConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/config/TownerType.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/config/TowerType.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/gameplay/GameLayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/gameplay/GameLayer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/gameplay/map/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/gameplay/map/Map.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/gameplay/map/Obstacle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/gameplay/map/Obstacle.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -547,17 +544,6 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" uri="http://localhost:63342/HelloJavascript/index.html">
       <RunnerSettings RunnerId="JavascriptDebugRunner" />
       <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
@@ -748,7 +734,8 @@
       <workItem from="1654336835075" duration="6141000" />
       <workItem from="1654387420542" duration="2971000" />
       <workItem from="1654402089363" duration="335000" />
-      <workItem from="1654402444517" duration="503000" />
+      <workItem from="1654402444517" duration="4562000" />
+      <workItem from="1654437131509" duration="140000" />
     </task>
     <task id="LOCAL-00001" summary="'feat: Start Project&#10;'">
       <created>1652848438089</created>
@@ -897,7 +884,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654145107364</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="'Complete random obstacle and map'">
+      <created>1654428236148</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1654428236148</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1013,7 +1007,8 @@
     <MESSAGE value="'feat: Complete Map Layer'" />
     <MESSAGE value="'feat: Add cell id'" />
     <MESSAGE value="'feat: Find path'" />
-    <option name="LAST_COMMIT_MESSAGE" value="'feat: Find path'" />
+    <MESSAGE value="'Complete random obstacle and map'" />
+    <option name="LAST_COMMIT_MESSAGE" value="'Complete random obstacle and map'" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
