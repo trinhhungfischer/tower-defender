@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e4d55f2b-12a8-484d-a811-f49e89a3e91c" name="Default" comment="'feat: Add find path'">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/Resource.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Resource.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/ResourceMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/ResourceMap.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/config/CellConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/config/CellConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/config/GameConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/config/GameConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/gameplay/map/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/gameplay/map/Map.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -735,7 +732,7 @@
       <workItem from="1654387420542" duration="2971000" />
       <workItem from="1654402089363" duration="335000" />
       <workItem from="1654402444517" duration="4562000" />
-      <workItem from="1654437131509" duration="140000" />
+      <workItem from="1654437131509" duration="854000" />
     </task>
     <task id="LOCAL-00001" summary="'feat: Start Project&#10;'">
       <created>1652848438089</created>
@@ -891,7 +888,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654428236148</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="'feat: Add res map'">
+      <created>1654437299363</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1654437299363</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1008,7 +1012,8 @@
     <MESSAGE value="'feat: Add cell id'" />
     <MESSAGE value="'feat: Find path'" />
     <MESSAGE value="'Complete random obstacle and map'" />
-    <option name="LAST_COMMIT_MESSAGE" value="'Complete random obstacle and map'" />
+    <MESSAGE value="'feat: Add res map'" />
+    <option name="LAST_COMMIT_MESSAGE" value="'feat: Add res map'" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

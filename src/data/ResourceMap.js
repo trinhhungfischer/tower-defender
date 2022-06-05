@@ -3,4 +3,5 @@ var resMap = {
     imageCellGrass: "map/map_cell_0002.png",
 
 
+
 };
