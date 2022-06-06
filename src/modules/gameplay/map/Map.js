@@ -26,6 +26,7 @@ var Map = cc.Node.extend({
         this.startPoint = this.getCellIdFromPos(0, MW.MAP_SIZE_HEIGHT - 1);
         this.endPoint = this.getCellIdFromPos(MW.MAP_SIZE_WIDTH - 1, 0);
 
+
         this._randomAllObstacles();
 
         this._initCell();
@@ -33,30 +34,33 @@ var Map = cc.Node.extend({
     },
 
     _initCell: function () {
-        for (let i = 0; i < MW.MAP_SIZE_WIDTH; i++) {
-            for (let j = 0; j < MW.MAP_SIZE_HEIGHT; j ++) {
+        for (let i = 0; i < MW.MAP_SIZE_HEIGHT; i++) {
+            for (let j = 0; j < MW.MAP_SIZE_WIDTH; j ++) {
 
-                var cellId = this.getCellIdFromPos(i, j);
+                var cellId = this.getCellIdFromPos(j, i);
 
-                var cell = new Cell(CELL.TYPE.GRASS, i, j);
+                var cell = new Cell(CELL.TYPE.GRASS, j, i);
 
-                cell.setPosition(i * cell.width, j * cell.height);
                 this.addChild(cell, MW.ZORDER.INGAME_CELL);
 
+                cell.setPosition(j * cell.width, i * cell.height);
+
                 if (cellId === this.startPoint)
-                    this.startPos = cell.position;
+                    this.startPos = cell.getPosition();
 
                 if (cellId === this.endPoint)
-                    this.endPos = cell.position;
+                    this.endPos = cell.getPosition();
 
+                MW.CONTAINER.MAP_CELL.push(cell);
 
-                    if (this.cellObjectId[cellId] === MW.MAP_CELL_TYPE.OBSTACLE)
+                if (this.cellObjectId[cellId] === MW.MAP_CELL_TYPE.OBSTACLE)
                 {
-                    var obstacle = new Cell(CELL.TYPE.ROCK_OBSTACLE, i, j);
+
+                    var obstacle = new Cell(CELL.TYPE.ROCK_OBSTACLE, j, i);
                     cell.addChild(obstacle, MW.ZORDER.INGAME_CELL);
                     MW.CONTAINER.MAP_OBSTACLE.push(cell);
                 }
-                else MW.CONTAINER.MAP_CELL.push(cell);
+
             }
         }
 
@@ -72,7 +76,7 @@ var Map = cc.Node.extend({
 
             let curCellId = this.getCellIdFromPos(xPos, yPos);
 
-            if (curCellId === this.startPoint && curCellId === this.endPoint)
+            if (curCellId === this.startPoint || curCellId === this.endPoint)
                 continue;
 
             let nexCellId = this.getNextCell(curCellId);

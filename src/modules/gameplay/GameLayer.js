@@ -32,6 +32,7 @@ var GameLayer = cc.Layer.extend({
         g_sharedGameLayer = this
 
         var enemy = new Enemy(ENEMY.TYPE.LESSER);
+
         // preset
 
     },
