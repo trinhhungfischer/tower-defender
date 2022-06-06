@@ -5,7 +5,11 @@
 var g_sharedGameLayer;
 
 var GameLayer = cc.Layer.extend({
+
     _itemMenu:null,
+    _map : null,
+
+
 
     ctor:function() {
         this._super();
@@ -19,15 +23,15 @@ var GameLayer = cc.Layer.extend({
         background.setPositionY(winSize.height / 8);
         this.addChild(background, MW.ZORDER.BACKGROUND);
 
-        var map = new Map();
-        map.setPosition(winSize.width / 2 - map.cellWidth * Math.floor(MW.MAP_SIZE_WIDTH / 2),
+        this._map = new Map();
+        this._map.setPosition(winSize.width / 2 - this._map.cellWidth * Math.floor(MW.MAP_SIZE_WIDTH / 2),
             winSize.height / 5);
 
-        // background.addChild(map, MW.ZORDER.INGAME_MAP);
-
-        this.addChild(map, MW.ZORDER.INGAME_MAP);
+        this.addChild(this._map, MW.ZORDER.INGAME_MAP);
 
         g_sharedGameLayer = this
+
+        var enemy = new Enemy(ENEMY.TYPE.LESSER);
         // preset
 
     },

@@ -1,10 +1,12 @@
 
-var Map = cc.Sprite.extend({
+var Map = cc.Node.extend({
 
     cellWidth: null,
     cellHeight: null,
     startPoint: null,
     endPoint: null,
+    startPos: null,
+    endPos: null,
     numOfObstacle: MW.MAP_OBSTACLE,
 
     obstacleCellId:[],
@@ -27,8 +29,6 @@ var Map = cc.Sprite.extend({
         this._randomAllObstacles();
 
         this._initCell();
-    
-
 
     },
 
@@ -42,7 +42,15 @@ var Map = cc.Sprite.extend({
 
                 cell.setPosition(i * cell.width, j * cell.height);
                 this.addChild(cell, MW.ZORDER.INGAME_CELL);
-                if (this.cellObjectId[cellId] === MW.MAP_CELL_TYPE.OBSTACLE)
+
+                if (cellId === this.startPoint)
+                    this.startPos = cell.position;
+
+                if (cellId === this.endPoint)
+                    this.endPos = cell.position;
+
+
+                    if (this.cellObjectId[cellId] === MW.MAP_CELL_TYPE.OBSTACLE)
                 {
                     var obstacle = new Cell(CELL.TYPE.ROCK_OBSTACLE, i, j);
                     cell.addChild(obstacle, MW.ZORDER.INGAME_CELL);
@@ -92,7 +100,7 @@ var Map = cc.Sprite.extend({
             var pastCellMapId = this.cellObjectId;
 
             this._randomOneObstacle();
-            if (this._pathFinder(this.startPoint, this.endPoint) == null) {
+            if (this.pathFinder(this.startPoint, this.endPoint) == null) {
                 this.cellObjectId = pastCellMapId;
             }
             else countOfObstacle ++;
@@ -108,7 +116,7 @@ var Map = cc.Sprite.extend({
      */
 
 
-    _pathFinder: function (startCellId, targetCellId){
+    pathFinder: function (startCellId, targetCellId){
         var queue = [];
 
         var prev = new Array(MW.MAP_SIZE_WIDTH * MW.MAP_SIZE_HEIGHT);

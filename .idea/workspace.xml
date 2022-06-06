@@ -4,14 +4,10 @@
     <list default="true" id="e4d55f2b-12a8-484d-a811-f49e89a3e91c" name="Default" comment="'feat: Add find path'">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/Resource.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Resource.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/ResourceMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/ResourceMap.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/config/CellConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/config/CellConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/config/GameConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/config/GameConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/config/EnemyType.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/config/EnemyConfig.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/gameplay/GameLayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/gameplay/GameLayer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/gameplay/enemy/Enemy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/gameplay/enemy/Enemy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/gameplay/helper/PathFinder.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/gameplay/map/Cell.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/gameplay/map/Cell.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/gameplay/map/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/gameplay/map/Map.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -321,7 +317,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Project/lgrc_project/client/HelloJavascript/src/framework/Framework.js" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../workshop/GameDemo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../tutorial/workshop/GameDemo" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="options.lastSelected" value="web-ide.project.structure" />
     <property name="options.searchVisible" value="true" />

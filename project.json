@@ -41,7 +41,7 @@
         "src/base/UIFactory.js",
         "src/modules/config/BackgroundConfig.js",
         "src/modules/config/CellConfig.js",
-        "src/modules/config/EnemyType.js",
+        "src/modules/config/EnemyConfig.js",
         "src/modules/config/GameConfig.js",
         "src/modules/config/ObstacleType.js",
         "src/modules/config/TowerType.js",
