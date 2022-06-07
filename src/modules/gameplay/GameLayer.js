@@ -9,6 +9,7 @@ var GameLayer = cc.Layer.extend({
     _itemMenu:null,
     _map : null,
     _deltaTime: 0,
+    _delayTime: 2,
 
 
 
@@ -59,7 +60,7 @@ var GameLayer = cc.Layer.extend({
     _spawnEnemy: function (dt) {
 
         this._deltaTime += dt;
-        if (this._deltaTime > 5) {
+        if (this._deltaTime > this._delayTime) {
             Enemy.getOrCreate();
             this._deltaTime = 0;
 

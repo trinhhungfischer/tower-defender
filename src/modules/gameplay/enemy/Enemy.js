@@ -112,6 +112,9 @@ var Enemy = cc.Sprite.extend({
         {
             this.moveToCellId(this._movePath[this._curCellIdIndex], this._movePath[this._curCellIdIndex + 1], dt);
         }
+        else if (this._type.MoveType === ENEMY.MOVE_TYPE.PASS) {
+            this.moveToCellId(g_sharedGameLayer._map.startCellId, g_sharedGameLayer._map.endCellId, dt);
+        }
 
     },
 

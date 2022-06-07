@@ -15,7 +15,6 @@ var Map = cc.Node.extend({
     ctor:function() {
         this._super();
         this._init();
-
         return true;
     },
 

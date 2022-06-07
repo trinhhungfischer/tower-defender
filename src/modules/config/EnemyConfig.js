@@ -24,10 +24,10 @@ ENEMY.TYPE = {
 
     BAT: {
         Image: res.imageBat,
-        MoveSpeed: 1,
+        MoveSpeed: 0.1,
         BaseHP: 100,
         BaseDamage: 5,
-        MoveType: 1,
+        MoveType: 2,
 
     },
 
