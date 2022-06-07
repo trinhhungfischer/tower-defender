@@ -17,6 +17,7 @@ MW.ZORDER = {
     INGAME_CELL: 100,
     INGAME_TOWER: 150,
     INGAME_MONSTER: 200,
+    INGAME_GATE: 250,
 }
 
 // Map config

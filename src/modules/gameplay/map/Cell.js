@@ -1,6 +1,6 @@
 
 
-var Cell = cc.Sprite.extend({
+let Cell = cc.Sprite.extend({
 
     xPos: null,
     yPos: null,
@@ -9,14 +9,19 @@ var Cell = cc.Sprite.extend({
         this._super(type);
         this.xPos = xPos;
         this.yPos = yPos;
-        this.anchorX = 0;
-        this.anchorY = 0;
+        this.anchorX = 0.5;
+        this.anchorY = 0.5;
+
+        if (xPos === 0 && yPos === 5) {
+            this.isDraw = true;
+        }
+
         return true;
     },
 
     collideRect:function (x, y) {
-        var w = this.width, h = this.height;
-        return cc.rect(x - w / 2, y - h / 2, w, h / 2);
+        let w = this.width, h = this.height;
+        return cc.rect(x, y, 0, 0);
     },
 
 });

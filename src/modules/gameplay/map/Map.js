@@ -3,8 +3,8 @@ var Map = cc.Node.extend({
 
     cellWidth: null,
     cellHeight: null,
-    startPoint: null,
-    endPoint: null,
+    startCellId: null,
+    endCellId: null,
     startPos: null,
     endPos: null,
     numOfObstacle: MW.MAP_OBSTACLE,
@@ -23,14 +23,27 @@ var Map = cc.Node.extend({
 
         this.cellObjectId = new Array(MW.MAP_SIZE_HEIGHT * MW.MAP_SIZE_WIDTH).fill(MW.MAP_CELL_TYPE.PATH);
 
-        this.startPoint = this.getCellIdFromPos(0, MW.MAP_SIZE_HEIGHT - 1);
-        this.endPoint = this.getCellIdFromPos(MW.MAP_SIZE_WIDTH - 1, 0);
+        this.startCellId = this.getCellIdFromPos(0, MW.MAP_SIZE_HEIGHT - 1);
+        this.endCellId = this.getCellIdFromPos(MW.MAP_SIZE_WIDTH - 1, 0);
 
 
         this._randomAllObstacles();
 
         this._initCell();
 
+        this._initStableObject();
+
+    },
+
+    _initStableObject: function () {
+        let startCell = cc.Sprite(resMap.imageMonsterGatePlayer);
+        startCell.setAnchorPoint(0, 0);
+        MW.CONTAINER.MAP_CELL[this.startCellId].addChild(startCell, MW.ZORDER.INGAME_GATE);
+        startCell.y += this.cellHeight;
+
+        let endCell = cc.Sprite(resMap.imageMapHouse);
+        endCell.setAnchorPoint(0, 0);
+        MW.CONTAINER.MAP_CELL[this.endCellId].addChild(endCell, MW.ZORDER.INGAME_GATE);
     },
 
     _initCell: function () {
@@ -45,18 +58,18 @@ var Map = cc.Node.extend({
 
                 cell.setPosition(j * cell.width, i * cell.height);
 
-                if (cellId === this.startPoint)
+                if (cellId === this.startCellId)
                     this.startPos = cell.getPosition();
 
-                if (cellId === this.endPoint)
+                if (cellId === this.endCellId)
                     this.endPos = cell.getPosition();
 
                 MW.CONTAINER.MAP_CELL.push(cell);
 
                 if (this.cellObjectId[cellId] === MW.MAP_CELL_TYPE.OBSTACLE)
                 {
-
                     var obstacle = new Cell(CELL.TYPE.ROCK_OBSTACLE, j, i);
+                    obstacle.setAnchorPoint(0, 0);
                     cell.addChild(obstacle, MW.ZORDER.INGAME_CELL);
                     MW.CONTAINER.MAP_OBSTACLE.push(cell);
                 }
@@ -76,7 +89,7 @@ var Map = cc.Node.extend({
 
             let curCellId = this.getCellIdFromPos(xPos, yPos);
 
-            if (curCellId === this.startPoint || curCellId === this.endPoint)
+            if (curCellId === this.startCellId || curCellId === this.endCellId)
                 continue;
 
             let nexCellId = this.getNextCell(curCellId);
@@ -104,7 +117,7 @@ var Map = cc.Node.extend({
             var pastCellMapId = this.cellObjectId;
 
             this._randomOneObstacle();
-            if (this.pathFinder(this.startPoint, this.endPoint) == null) {
+            if (this.pathFinder(this.startCellId, this.endCellId) == null) {
                 this.cellObjectId = pastCellMapId;
             }
             else countOfObstacle ++;

@@ -9,24 +9,22 @@ var Enemy = cc.Sprite.extend({
     _type: null,
     _movePath: null,
     _curCellId:null,
+    _curCellIdIndex: 0,
     _moveDirection: null,
     _moveDestination: null,
     _goal: null,
     _state: null,
+    _isMove: false,
 
     ctor: function (type) {
         this._type = type;
         this._super(res.imageBat);
 
-        this._movePath = g_sharedGameLayer._map.pathFinder(MW.MAP_START_CELL_ID, MW.MAP_END_CELL_ID);
 
-        this._state = MW.MAP_STATE.START_PUT_TOWER;
+        this._init();
 
-        MW.CONTAINER.MAP_CELL[MW.MAP_START_CELL_ID].addChild(this, MW.ZORDER.INGAME_MONSTER);
 
-        this.x += g_sharedGameLayer._map.cellWidth / 2;
-        this.y += g_sharedGameLayer._map.cellHeight / 2;
-
+        g_sharedGameLayer._map.addChild(this, MW.ZORDER.INGAME_MONSTER);
     },
 
     _init: function () {
@@ -34,9 +32,28 @@ var Enemy = cc.Sprite.extend({
         this._hp = this._type.BaseHP;
         this._damage = this._type.BaseDamage;
 
+
         // Set move destination and final goal position
+        this._goal = g_sharedGameLayer._map.endCellId;
         this._movePath = g_sharedGameLayer._map.pathFinder(MW.MAP_START_CELL_ID, MW.MAP_END_CELL_ID);
         this._state = MW.GAME_STATE.END_PUT_TOWER;
+
+        // Appear position
+        this.x = g_sharedGameLayer._map.startPos.x;
+        this.y = g_sharedGameLayer._map.startPos.y;
+        this._curCellId = g_sharedGameLayer._map.startCellId;
+
+
+        var w = this.width, h = this.height;
+
+        var blank_rectangle = cc.Sprite.create();
+        blank_rectangle.setTextureRect(cc.rect(this.x, this.y, w, h));
+        blank_rectangle.setAnchorPoint(0, 0);
+        blank_rectangle.setOpacity(180);
+
+        this.addChild(blank_rectangle, 400);
+
+        this.scheduleUpdate();
     },
 
     _updatePath:function () {
@@ -46,26 +63,63 @@ var Enemy = cc.Sprite.extend({
         }
     },
 
-    changeDirection: function (direction) {
+    changeDirection: function (startCellId, targetCellId) {
+        if (targetCellId === startCellId + 1)
+            return ENEMY.DIRECTION.RIGHT;
+
+        if (targetCellId === startCellId + 1)
+            return ENEMY.DIRECTION.RIGHT;
+
+        if (targetCellId === startCellId + MW.MAP_SIZE_WIDTH)
+            return ENEMY.DIRECTION.UP;
+
+        if (targetCellId === startCellId - MW.MAP_SIZE_WIDTH)
+            return ENEMY.DIRECTION.DOWN;
+
+        if (targetCellId === startCellId + 1)
+            return ENEMY.DIRECTION.RIGHT;
 
     },
 
-    moveByCellId: function (startCellId, targetCellId, dt) {
-        var startPos = MW.CONTAINER.MAP_CELL[startCellId].position;
-        var endPos = MW.CONTAINER.MAP_CELL[targetCellId].position;
+    moveToCellId: function (startCellId, targetCellId, dt) {
+        var startPos = MW.CONTAINER.MAP_CELL[startCellId].getPosition();
+        var endPos = MW.CONTAINER.MAP_CELL[targetCellId].getPosition();
 
-        // this.x +=
+        if (!this.checkEnterCell(targetCellId)) {
+            this.x += dt * (endPos.x - startPos.x) * this._moveSpeed;
+            this.y += dt * (endPos.y - startPos.y) * this._moveSpeed;
+        }
+        else {
+            this.x = endPos.x;
+            this.y = endPos.y;
+            this._curCellId = targetCellId;
+            this._curCellIdIndex += 1;
+        }
+    },
+
+    checkEnterCell: function (cellId) {
+        let cell = MW.CONTAINER.MAP_CELL[cellId];
+        let ax = this.x, ay = this.y, bx = cell.x, by = cell.y;
+
+        if (Math.abs(ax - bx) > (1) || Math.abs(ay - by) > (1))
+            return false;
+        return true;
+    },
+
+    collide:function (a, b) {
 
     },
 
     update: function (dt) {
-        this.updateDestination();
-        this.updateMoveDirection();
-        this.makeEnemyMove(dt);
+        // this.updateDestination();
+        // this.updateMoveDirection();
+        this.moveToCellId(this._movePath[this._curCellIdIndex], this._movePath[this._curCellIdIndex + 1], dt);
         this.checkReachedGoal();
     },
 
     checkReachedGoal: function () {
+        if (this._curCellId == this._goal)
+            this.destroy();
 
     },
 
@@ -76,14 +130,16 @@ var Enemy = cc.Sprite.extend({
 
     },
 
-    makeEnemyMove: function (dt) {
-
-    },
     destroy: function () {
         this.unscheduleUpdate();
         this.stopAllActions();
         this.active = false;
         this.visible = false;
         this.removeFromParent();
+    },
+
+    collideRect:function (x, y) {
+        var w = this.width, h = this.height;
+        return cc.rect(x - w / 2, y - h / 2, w, h);
     },
 });
