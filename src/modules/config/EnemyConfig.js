@@ -14,10 +14,26 @@ ENEMY.DIRECTION = {
 
 ENEMY.TYPE = {
     LESSER : {
+        Image: res.imageLesser,
         MoveSpeed: 1,
         BaseHP: 100,
         BaseDamage: 5,
+        MoveType: 1,
+
     },
 
+    BAT: {
+        Image: res.imageBat,
+        MoveSpeed: 1,
+        BaseHP: 100,
+        BaseDamage: 5,
+        MoveType: 2,
+
+    },
+}
+
+ENEMY.MOVE_TYPE = {
+    DEFAULT: 1,
+    PASS: 2,
 }
 

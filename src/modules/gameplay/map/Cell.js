@@ -12,10 +12,6 @@ let Cell = cc.Sprite.extend({
         this.anchorX = 0.5;
         this.anchorY = 0.5;
 
-        if (xPos === 0 && yPos === 5) {
-            this.isDraw = true;
-        }
-
         return true;
     },
 

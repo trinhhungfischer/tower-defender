@@ -3,12 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e4d55f2b-12a8-484d-a811-f49e89a3e91c" name="Default" comment="'feat: Add enemy find path'">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/ResourceMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/ResourceMap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/Resource.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Resource.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/config/EnemyConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/config/EnemyConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/config/GameConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/config/GameConfig.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/gameplay/enemy/Enemy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/gameplay/enemy/Enemy.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/gameplay/map/Cell.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/gameplay/map/Cell.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/gameplay/map/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/gameplay/map/Map.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -545,6 +543,17 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" uri="http://localhost:63342/HelloJavascript/index.html">
       <RunnerSettings RunnerId="JavascriptDebugRunner" />
       <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
@@ -745,7 +754,7 @@
       <workItem from="1654557981757" duration="1518000" />
       <workItem from="1654559624551" duration="74000" />
       <workItem from="1654559892561" duration="84000" />
-      <workItem from="1654560031918" duration="218000" />
+      <workItem from="1654560031918" duration="1492000" />
     </task>
     <task id="LOCAL-00001" summary="'feat: Start Project&#10;'">
       <created>1652848438089</created>
@@ -922,7 +931,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654486952447</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="'feat: Enemy run and hit target'">
+      <created>1654560295367</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1654560295367</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1042,7 +1058,8 @@
     <MESSAGE value="'feat: Add res map'" />
     <MESSAGE value="'fix: Fix map res'" />
     <MESSAGE value="'feat: Add enemy find path'" />
-    <option name="LAST_COMMIT_MESSAGE" value="'feat: Add enemy find path'" />
+    <MESSAGE value="'feat: Enemy run and hit target'" />
+    <option name="LAST_COMMIT_MESSAGE" value="'feat: Enemy run and hit target'" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

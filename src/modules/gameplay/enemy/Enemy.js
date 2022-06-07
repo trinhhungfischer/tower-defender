@@ -18,11 +18,8 @@ var Enemy = cc.Sprite.extend({
 
     ctor: function (type) {
         this._type = type;
-        this._super(res.imageBat);
-
-
+        this._super(type.Image);
         this._init();
-
 
         g_sharedGameLayer._map.addChild(this, MW.ZORDER.INGAME_MONSTER);
     },
@@ -42,16 +39,6 @@ var Enemy = cc.Sprite.extend({
         this.x = g_sharedGameLayer._map.startPos.x;
         this.y = g_sharedGameLayer._map.startPos.y;
         this._curCellId = g_sharedGameLayer._map.startCellId;
-
-
-        var w = this.width, h = this.height;
-
-        var blank_rectangle = cc.Sprite.create();
-        blank_rectangle.setTextureRect(cc.rect(this.x, this.y, w, h));
-        blank_rectangle.setAnchorPoint(0, 0);
-        blank_rectangle.setOpacity(180);
-
-        this.addChild(blank_rectangle, 400);
 
         this.scheduleUpdate();
     },
@@ -101,7 +88,8 @@ var Enemy = cc.Sprite.extend({
         let cell = MW.CONTAINER.MAP_CELL[cellId];
         let ax = this.x, ay = this.y, bx = cell.x, by = cell.y;
 
-        if (Math.abs(ax - bx) > (1) || Math.abs(ay - by) > (1))
+        // TODO: fix magic number here
+        if (Math.abs(ax - bx) > 3 || Math.abs(ay - by) > 3)
             return false;
         return true;
     },
@@ -113,7 +101,7 @@ var Enemy = cc.Sprite.extend({
     update: function (dt) {
         // this.updateDestination();
         // this.updateMoveDirection();
-        this.moveToCellId(this._movePath[this._curCellIdIndex], this._movePath[this._curCellIdIndex + 1], dt);
+        this._updateMove(dt);
         this.checkReachedGoal();
     },
 
@@ -122,6 +110,12 @@ var Enemy = cc.Sprite.extend({
             this.destroy();
 
     },
+
+    _updateMove: function (dt) {
+        if (this._type.MoveType === ENEMY.MOVE_TYPE.DEFAULT)
+            this.moveToCellId(this._movePath[this._curCellIdIndex], this._movePath[this._curCellIdIndex + 1], dt);
+
+        },
 
     updateDestination: function () {
     },
