@@ -27,10 +27,26 @@ ENEMY.TYPE = {
         MoveSpeed: 1,
         BaseHP: 100,
         BaseDamage: 5,
-        MoveType: 2,
+        MoveType: 1,
 
     },
+
+    CAPTAIN: {
+        Image: res.imageCaptain,
+        MoveSpeed: 0.5,
+        BaseHP: 1000,
+        BaseDamage: 20,
+        MoveType: 1,
+
+    }
 }
+
+ENEMY.ENEMY_INDEX = [
+    ENEMY.TYPE.LESSER,
+    ENEMY.TYPE.BAT,
+    ENEMY.TYPE.CAPTAIN,
+]
+
 
 ENEMY.MOVE_TYPE = {
     DEFAULT: 1,

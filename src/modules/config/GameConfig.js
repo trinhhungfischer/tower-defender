@@ -39,5 +39,5 @@ MW.MAP_STATE = {
 MW.CONTAINER = {
     MAP_CELL: [],
     MAP_OBSTACLE: [],
-
+    MAP_PLAYER_ENEMY: [],
 }

@@ -68,7 +68,9 @@ var Map = cc.Node.extend({
 
                 if (this.cellObjectId[cellId] === MW.MAP_CELL_TYPE.OBSTACLE)
                 {
-                    var obstacle = new Cell(CELL.TYPE.ROCK_OBSTACLE, j, i);
+                    let randomIndex = Math.floor(Math.random() * CELL.OBSTACLE_INDEX.length);
+
+                    var obstacle = new Cell(CELL.OBSTACLE_INDEX[randomIndex], j, i);
                     obstacle.setAnchorPoint(0, 0);
                     cell.addChild(obstacle, MW.ZORDER.INGAME_CELL);
                     MW.CONTAINER.MAP_OBSTACLE.push(cell);

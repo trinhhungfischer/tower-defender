@@ -2,11 +2,226 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4d55f2b-12a8-484d-a811-f49e89a3e91c" name="Default" comment="'feat: Add enemy find path'">
+      <change afterPath="$PROJECT_DIR$/src/modules/gameplay/enemy/EnemySpawner.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/FAKE/Fake_Ingame-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/FAKE/Fake_Ingame-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/FAKE/Fake_Ingame.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/Thumbs.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/UI/ui_balloon_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/UI/ui_balloon_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/UI/ui_circle_frame.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/UI/ui_circle_frame_transparent.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/UI/ui_circle_transparent.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/UI/ui_gesture_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/UI/ui_gesture_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/UI/ui_gesture_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/UI/ui_gesture_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/UI/ui_gesture_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/UI/ui_gesture_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/UI/ui_gesture_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/UI/ui_gesture_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/UI/ui_gesture_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/UI/ui_gesture_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/UI/ui_gesture_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/UI/ui_gesture_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/UI/ui_grid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/UI/ui_hole.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/UI/ui_icon_arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/UI/ui_icon_large_dot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/UI/ui_icon_small_dot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/UI/ui_target_full_HP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/UI/ui_target_furthest.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/UI/ui_target_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/UI/ui_target_low_HP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/UI/ui_target_nearest.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/UI/ui_transparent_square.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/battle_btn_chat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/battle_btn_destroy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/battle_card_box.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/battle_deck.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/battle_info_box.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/battle_item_attack_speed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/battle_item_cell.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/battle_item_damage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/battle_item_range.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/battle_potion_range.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/battle_target_hp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/battle_target_hp_background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/battle_timer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/battle_timer_background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/battle_timer_border.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/battle_tower_pedestal_rock.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/battle_tower_pedestal_steel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/battle_tower_pedestal_wood.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/battle_tower_range_enemy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/battle_tower_range_player.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/fx/enemy_circle.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/fx/enemy_circle.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/fx/enemy_circle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/fx/fx_icon_upgrade.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/fx/fx_icon_upgrade.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle/fx/fx_icon_upgrade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle_result/battle_result_avatar_border_loser.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle_result/battle_result_health_box.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle_result/battle_result_icon_swords_lose.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle_result/battle_result_icon_swords_win.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle_result/battle_result_line_lose.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle_result/battle_result_line_win.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle_result/battle_result_reward_box.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle_result/fx/fx_result_draw.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle_result/fx/fx_result_draw.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle_result/fx/fx_result_draw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle_result/fx/fx_result_lose.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle_result/fx/fx_result_lose.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle_result/fx/fx_result_lose.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle_result/fx/fx_result_win.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle_result/fx/fx_result_win.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/battle_result/fx/fx_result_win.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/Thumbs.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/fx/Thumbs.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/fx/card_upgrade_ready.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/fx/card_upgrade_ready.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/fx/card_upgrade_ready.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/fx/fx_particle_shop_gold.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/fx/fx_particle_shop_gold.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/fx/lobby_card_panel_miniature_particle_common.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/fx/lobby_card_panel_miniature_particle_epic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/fx/lobby_card_panel_miniature_particle_legend.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/fx/lobby_card_panel_miniature_particle_rare.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/fx/miniature_rarity_particle_1.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/fx/miniature_rarity_particle_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/fx/miniature_rarity_particle_2.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/fx/miniature_rarity_particle_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/fx/miniature_rarity_particle_3.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/fx/miniature_rarity_particle_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/fx/miniature_rarity_particle_4.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/fx/miniature_rarity_particle_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_box.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_card_banner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_card_btn_deck.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_card_btn_deck_selecting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_card_deck.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_card_panel_box.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_card_panel_evolution.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_card_panel_flag_common.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_card_panel_flag_epic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_card_panel_flag_legend.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_card_panel_flag_rare.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_card_panel_miniature_glow_common.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_card_panel_miniature_glow_epic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_card_panel_miniature_glow_legend.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_card_panel_miniature_glow_rare.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_card_panel_stat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_card_progress.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_card_progress_background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_card_progress_background_deck.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_card_progress_glow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_card_progress_max.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_card_switch_arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_card_switch_glossy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_card_switch_outline.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_currency_background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_currency_btn_top_up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_home_arena_glow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_home_btn_battle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_home_btn_battle_pressing.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_home_btn_battle_txt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_home_playaer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_home_treasure_empty.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_home_treasure_finished.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_home_treasure_opening.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_home_treasure_opening_time.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_page_btn_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_page_btn_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_page_btn_selecting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_page_icon_cards.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_page_icon_clan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_page_icon_home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_page_icon_shop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_page_icon_social.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_shop_banner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_shop_category.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_shop_category_daily.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_shop_category_gold.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_shop_category_refresh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_shop_item_background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_shop_item_bought.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_shop_item_gold_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_shop_item_gold_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_shop_item_gold_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_shop_item_gold_glow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/lobby_stat_icon_time.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/telegram-cloud-document-5-6156724271788851731.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/treasure/common_icon_card.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/treasure/common_icon_card_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/treasure/common_icon_card_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/treasure/common_icon_card_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/treasure/common_icon_card_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/treasure/common_icon_card_multiple.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/treasure/common_icon_card_multiple_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/treasure/common_icon_card_multiple_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/treasure/common_icon_card_multiple_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/treasure/common_icon_card_multiple_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/treasure/common_treasure_pedestal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/treasure/common_treasure_tutorial.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/treasure/fake/Fake_Info_Chest_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/treasure/fx/fx_chest_lv1.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/treasure/fx/fx_chest_lv1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/treasure/fx/fx_chest_lv1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/treasure/fx/fx_vip.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/treasure/fx/fx_vip.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/treasure/fx/fx_vip.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/treasure/fx/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/lobby/treasure/lobby_treasure_info_box.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/potion/effect_atk_fire.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/potion/effect_atk_fire.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/potion/effect_atk_fire.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/potion/effect_atk_ice.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/potion/effect_atk_ice.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/potion/effect_atk_ice.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/potion/effect_buff_heal.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/potion/effect_buff_heal.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/potion/effect_buff_heal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/potion/effect_buff_speed.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/potion/effect_buff_speed.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/potion/effect_buff_speed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/potion/fx_heal.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/potion/fx_heal.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/potion/fx_heal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/potion/fx_trap/Thumbs.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/potion/fx_trap/image0000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/potion/fx_trap/image0001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/potion/fx_trap/image0002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/potion/fx_trap/image0003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/potion/fx_trap/image0004.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/potion/fx_trap/image0005.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/potion/fx_trap/image0006.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/potion/fx_trap/image0007.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/potion/fx_trap/image0008.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/potion/fx_trap/image0009.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/potion/fx_trap/image0010.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/potion/tower_strength_fx.atlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/potion/tower_strength_fx.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/potion/tower_strength_fx.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/skill/common_panel_btn_back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/skill/icon_skill_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/skill/icon_skill_05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/skill/lobby_card_skill_locked.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/skill/lobby_card_skill_separator.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/skill/skill_icon_armor_break.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/skill/skill_icon_burn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/skill/skill_icon_poison.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/skill/skill_icon_slow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/skill/skill_icon_stun.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/Resource.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Resource.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/config/CellConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/config/CellConfig.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/config/EnemyConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/config/EnemyConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/config/GameConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/config/GameConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/gameplay/GameLayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/gameplay/GameLayer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/gameplay/enemy/Enemy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/gameplay/enemy/Enemy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/gameplay/map/Cell.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/gameplay/map/Cell.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/gameplay/map/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/gameplay/map/Map.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -315,7 +530,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Project/lgrc_project/client/HelloJavascript/src/framework/Framework.js" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../workshop/GameDemo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="options.lastSelected" value="web-ide.project.structure" />
     <property name="options.searchVisible" value="true" />
@@ -543,17 +758,6 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" uri="http://localhost:63342/HelloJavascript/index.html">
       <RunnerSettings RunnerId="JavascriptDebugRunner" />
       <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
@@ -755,6 +959,7 @@
       <workItem from="1654559624551" duration="74000" />
       <workItem from="1654559892561" duration="84000" />
       <workItem from="1654560031918" duration="1492000" />
+      <workItem from="1654567469740" duration="1429000" />
     </task>
     <task id="LOCAL-00001" summary="'feat: Start Project&#10;'">
       <created>1652848438089</created>

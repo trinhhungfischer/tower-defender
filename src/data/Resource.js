@@ -29,7 +29,8 @@ var res = {
         // Game Layer
     imageCellGrass: "map/map_cell_0002.png",
     imageBat: "monster/frame/bat/monster_bat_run_0000.png",
-    imageLesser: "monster/frame/assassin/monster_assassin_run_0000.png"
+    imageLesser: "monster/frame/assassin/monster_assassin_run_0000.png",
+    imageCaptain: "monster/frame/giant/monster_giant_run_0000.png"
 
 };
 
